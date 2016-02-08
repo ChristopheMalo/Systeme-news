@@ -8,7 +8,11 @@ TP openclassrooms - POO en PHP
 - Diagramme UML (avec DIA)
 - Export du diagramme (générer le code PHP des classes)
 - Création de la DB newsDB et de la table news
-- Coder les classes
+- Coder les classes :
+-- News
+-- NewsManager
+-- NewsManager_PDO
+-- NewsManager_MySQLi
 
 ## Copyright
 Openclassrooms - Victor Thuillier - Adaptation Christophe Malo
