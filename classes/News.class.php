@@ -80,31 +80,31 @@ class News {
     /**
      * Méthodes Accesseurs (Getters) - Pour récupérer / lire la valeur d'un attribut
      */
-    public function erreurs() {
+    public function getErreurs() {
         return $this->erreurs;
     }
 
-    public function id() {
+    public function getId() {
         return $this->id;
     }
 
-    public function auteur() {
+    public function getAuteur() {
         return $this->auteur;
     }
 
-    public function titre() {
+    public function getTitre() {
         return $this->titre;
     }
 
-    public function contenu() {
+    public function getContenu() {
         return $this->contenu;
     }
 
-    public function dateAjout() {
+    public function getDateAjout() {
         return $this->dateAjout;
     }
 
-    public function dateModif() {
+    public function getDateModif() {
         return $this->dateModif;
     }
 
