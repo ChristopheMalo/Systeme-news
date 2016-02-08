@@ -14,35 +14,33 @@ class News {
     /**
      * Attributs
      */
-    protected   $erreurs = [],
-                $id,
-                $auteur,
-                $titre,
-                $contenu,
-                $dateAjout,
-                $dateModif;
+    protected $erreurs = [],
+            $id,
+            $auteur,
+            $titre,
+            $contenu,
+            $dateAjout,
+            $dateModif;
 
-    
     /**
      * Déclaration des Constantes - Pour la gestion des erreurs qui peuvent être rencontrées lors de l'exécution de la méthode.
      */
-    const AUTEUR_INVALIDE   = 1;    // L'auteur de la news n'est pas valide
-    const TITRE_INVALIDE    = 2;     // Le titre de la news n'est pas valide
-    const CONTENU_INVALIDE  = 3;   // Le contenu de la news n'est pas valide
+    const AUTEUR_INVALIDE = 1;    // L'auteur de la news n'est pas valide
+    const TITRE_INVALIDE = 2;     // Le titre de la news n'est pas valide
+    const CONTENU_INVALIDE = 3;   // Le contenu de la news n'est pas valide
 
-    
     /**
      * Constructeur de la classe qui assigne les données spécifiées en paramètre aux attributs correspondants.
      * @param $valeurs array Les valeurs à assigner
      * @return void
      */
+
     public function __construct($valeurs = []) {
         if (!empty($valeurs)) { // Si on a spécifié des valeurs, alors on hydrate l'objet.
             $this->hydrate($valeurs);
         }
     }
 
-    
     /**
      * Méthode d'hydratation assignant les valeurs spécifiées aux attributs correspondant.
      * @param $donnees array Les données à assigner
@@ -58,7 +56,6 @@ class News {
         }
     }
 
-    
     /**
      * Méthode permettant de savoir si la news est nouvelle.
      * @return bool
@@ -67,7 +64,6 @@ class News {
         return empty($this->id);
     }
 
-    
     /**
      * Méthode permettant de savoir si la news est valide.
      * @return bool
@@ -76,7 +72,6 @@ class News {
         return !(empty($this->auteur) || empty($this->titre) || empty($this->contenu));
     }
 
-    
     /**
      * Méthodes Accesseurs (Getters) - Pour récupérer / lire la valeur d'un attribut
      */
@@ -108,7 +103,6 @@ class News {
         return $this->dateModif;
     }
 
-    
     /**
      * Methodes Mutateurs (Setters) - Pour modifier la valeur d'un attribut
      * Pas de setter pour les erreurs

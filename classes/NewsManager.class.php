@@ -14,7 +14,6 @@
  * @updated     08/02/2016
  * @version     3.0
  */
-
 abstract class NewsManager {
 
     /**
@@ -73,5 +72,4 @@ abstract class NewsManager {
      * @return void
      */
     abstract protected function update(News $news);
-    
 }
