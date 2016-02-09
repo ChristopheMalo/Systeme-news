@@ -3,6 +3,9 @@
 /**
  * Classe qui permet d'accéder aux instances PDO et MySQLi
  * Cette classe utilise le design pattern Factory
+ *
+ * Ce fichier est un fichier exemple
+ * Il faut supprimer l'extension .sample et la remplacer par .php
  * 
  * TP Créer un système de news - POO en PHP
  * 
