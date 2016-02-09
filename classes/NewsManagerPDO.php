@@ -2,7 +2,7 @@
 
 /**
  * Classe spécialisée pour se connecter à la DB en PDO
- * Cette classe hérite de NewsMAnager
+ * Cette classe hérite de NewsManager
  * 
  * TP Créer un système de news - POO en PHP
  * 
