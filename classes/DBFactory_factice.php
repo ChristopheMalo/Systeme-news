@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Classe qui permet d'accéder aux instances PDO et MySQLi
+ * Cette classe utilise le design pattern Factory
+ * 
+ * TP Créer un système de news - POO en PHP
+ * 
+ * @author      Victor Thuillier
+ * @adaptation  Christophe Malo
+ * @updated     09/02/2016
+ * @version     3.0
+ */
+class DBFactory {
+
+    public static function getMysqlConnexionWithPDO() {
+        $db = new PDO('mysql:host=name_host;dbname=name_db', 'login_db_user', 'password_db_user');
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $db;
+    }
+
+    public static function getMysqlConnexionWithMySQLi() {
+        return new MySQLi('name_host', 'login_db_user', 'password_db_user', 'name_db');
+    }
+
+}
