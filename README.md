@@ -13,7 +13,8 @@ TP openclassrooms - POO en PHP
     - NewsManager
     - NewsManager_PDO
     - NewsManager_MySQLi
-- à venir
+- Coder la page admin
+- Intégrer Boostrap
 
 ## Copyright
 Openclassrooms - Victor Thuillier - Adaptation Christophe Malo

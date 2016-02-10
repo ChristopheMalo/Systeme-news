@@ -1,0 +1,57 @@
+/**
+ * Projet jQuery
+ * TP Créer un système de news - POO en PHP
+ * Adaptation Christophe Malo
+ *
+ * @project     TP - Créer un système de news - POO en PHP
+ * @namefile    style.css
+ * @fileversion 1.0.0
+ * @cssversion  css3
+ * @author      Christophe Malo
+ * @copyright   2016 by the author & openclassrooms
+ * @license     no license - free to use - just link to my github - Thanks :)
+ * @mygithub    https://github.com/ChristopheMalo    
+*/
+/**
+
+/**
+ * -------------------------
+ * Font
+ * -------------------------
+ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
+/**
+ * -------------------------
+ * Generique
+ * -------------------------
+ */
+body {
+    padding-top: 10px;
+}
+
+/* Permet de visualiser la grille */
+/*[class*="col-"], footer {
+    background-color: #c9bad7;
+    border: 1px solid #948b9d;
+    border-radius: 6px;
+    color: #6a6073;
+}*/
+
+h1 {
+    font-size: 190%;
+}
+
+h2 {
+    font-size: 170%
+}
+
+h3 {
+    font-size: 150%;
+}
+
+footer {
+    font-size: 90%;
+    padding-top: 40px;
+    text-align: center;
+}
