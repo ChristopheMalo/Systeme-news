@@ -66,13 +66,13 @@ if (isset($_POST['auteur'])) {
                     <p><a href=".">Accéder à l'accueil du site</a></p>
                 </header>
 
-                <div class="col-sm-12">             
+                <div id="content-form" class="col-sm-12">             
                     <form action="admin.php" class="form-horizontal" method="post">
                         
                         <!-- Affichage message -->
                         <?php
                         if (isset($message)) {
-                            echo '<div class="col-sm-12"><p class="alert alert-success" role="alert">' . $message . '</p>';
+                            echo '<div class="col-sm-12"><p class="alert alert-success" role="alert"><strong>' . $message . '</strong></p>';
                         }
                         ?>
 
@@ -131,13 +131,13 @@ if (isset($_POST['auteur'])) {
                         ?>
 
                             <input type="hidden" name="id" value="<?php echo $news->getId() ?>">
-                            <input class="btn btn-primary" type="submit" value="Modifier" name="modifier">
+                            <input class="btn btn-primary pull-right" type="submit" value="Modifier" name="modifier">
 
                         <?php
                         } else {
                         ?>
 
-                            <input class="btn btn-primary" type="submit" value="Ajouter">
+                            <input class="btn btn-primary pull-right" type="submit" value="Ajouter">
 
                         <?php
                         }
@@ -147,7 +147,7 @@ if (isset($_POST['auteur'])) {
                 </div>
 
                 <div class="col-sm-12">
-                    <p class="alert alert-info">Il y a actuellement <?php echo $manager->count(); ?> news. En voici la liste :</p>
+                    <p class="alert alert-info"><strong>Il y a actuellement <?php echo $manager->count(); ?> news. En voici la liste :</strong></p>
                 </div>
 
                 <!-- Liste des news -->
@@ -163,7 +163,7 @@ if (isset($_POST['auteur'])) {
                         <?php
                         foreach ($manager->getList() as $news)
                         {
-                          echo '<tr><td>', $news->getAuteur(), '</td><td>', $news->getTitre(), '</td><td>', $news->getDateAjout()->format('d/m/Y à H\hi'), '</td><td>', ($news->getDateAjout() == $news->getDateModif() ? '-' : $news->getDateModif()->format('d/m/Y à H\hi')), '</td><td><a href="?modifier=', $news->getId(), '">Modifier</a> | <a href="?supprimer=', $news->getId(), '">Supprimer</a></td></tr>', "\n";
+                          echo '<tr><td>' . $news->getAuteur() . '</td><td>' . $news->getTitre() . '</td><td>' . $news->getDateAjout()->format('d/m/Y à H\hi') . '</td><td>' . ($news->getDateAjout() == $news->getDateModif() ? '-' : $news->getDateModif()->format('d/m/Y à H\hi')) . '</td><td><a href="?modifier=' . $news->getId() . '">Modifier</a> | <a href="?supprimer=' . $news->getId() . '">Supprimer</a></td></tr>';
                         }
                         ?>
                     </table>
