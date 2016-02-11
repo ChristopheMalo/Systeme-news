@@ -63,7 +63,7 @@ if (isset($_POST['auteur'])) {
             <div class="row">
                 <header class="col-sm-12">
                     <h1>Interface de gestion des news</h1>
-                    <p><a href=".">Accéder à l'accueil du site</a></p>
+                    <p><a href="index.php">Accéder à l'accueil du site</a></p>
                 </header>
 
                 <div id="content-form" class="col-sm-12">             
